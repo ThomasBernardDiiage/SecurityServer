@@ -1,0 +1,15 @@
+<section id="wrapper">
+    <div class="bubble top-bubble"></div>
+    <div class="bubble bottom-bubble"></div>
+    <lottie-player (click)="onClick()" id="lottie" src="https://assets6.lottiefiles.com/packages/lf20_jcikwtux.json" speed="1" class="lottie-login" loop autoplay></lottie-player>
+    <form class="frame overlay" [formGroup]="form" (ngSubmit)="login()">
+        <h1>Login</h1>
+        <input placeholder="Email" formControlName="email"/>
+        <input type="password" placeholder="Password" formControlName="password"/>
+        <hr/>
+        <p class="error-message">{{errorMessage}}</p>
+        <app-button id="sign-in-button" [buttonText]="'Sign in'" [isLoading]="isLoading"></app-button>
+        <a href="">Don't have an account ? <span class="purple-text">Sign up</span></a>
+    </form>
+</section>
+<app-information *ngIf="clickCount >= 5"></app-information>

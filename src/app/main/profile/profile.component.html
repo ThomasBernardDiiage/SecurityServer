@@ -1,0 +1,32 @@
+<form #loginForm="ngForm" class="overlay profile-page" (ngSubmit)="save(loginForm)" *ngIf="user">
+  <section>
+    <img src="{{ picture }}" alt="user avatar">
+
+    <br>
+
+    <label for="picture">Picture url :</label>
+    <input name="picture" type="text" id="picture" [(ngModel)]="picture" [disabled]="!isEditable">
+
+    <br>
+
+    <label for="firstname">Firstname :</label>
+    <input name="firstname" type="text" [disabled]="!isEditable" [(ngModel)]="firstname">
+
+    <label for="lastname">Lastname :</label>
+    <input name="lastname" type="text" [value]="user.lastname" [disabled]="!isEditable" [(ngModel)]="lastname">
+
+    <label for="email">Email :</label>
+    <input name="email" type="text" [value]="user.email" [disabled]="!isEditable" [(ngModel)]="email">
+
+    <br>
+  </section>
+  
+  
+  <button *ngIf="!isEditable" (click)="edit()" type="submit">Edit</button>
+
+  <div *ngIf="isEditable">
+    <button (click)="cancel()" type="button">Cancel</button>
+    <button type="submit">Save</button>
+  </div>
+
+</form>

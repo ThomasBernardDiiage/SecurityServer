@@ -1,0 +1,15 @@
+<section class="applications-page">
+  <section class="overlay menu">
+      <div class="header">
+          <i (click)="createApplication()" class="fa-solid fa-plus button-add"></i>
+      </div>
+      <div class="list">
+          <div [appHighlight]="color" class="menu-item" *ngFor="let application of applications$" [class.selected]="application === selectedApplication"
+              (click)="onApplicationClick(application)">
+              <img src="https://upload.wikimedia.org/wikipedia/fr/0/09/Logo_App_Store_d%27Apple.png" width="40">
+              <span class="app-name">{{ application.applicationName }}</span>
+          </div>
+      </div>
+  </section>
+  <app-details-application [selectedApp]=selectedApplication></app-details-application>
+</section>

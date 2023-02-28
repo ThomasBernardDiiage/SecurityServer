@@ -1,0 +1,144 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Ralway, sans-serif;
+}
+
+select {
+    border-radius: 14px;
+    border: #D2D6DC 1px solid;
+    font-size: 14pt;
+    padding: 10px;
+}
+
+button{
+    background-color: #B391FF;
+    border: none;
+    border-radius: 34px;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.overlay {
+    background: rgba(250, 250, 250, 0.94);
+    border: 1px solid #F0EBEB;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.purple-text{
+    color: #B391FF;
+}
+
+section.wrapper {
+    display: flex;
+    padding: 20px;
+}
+div.bubble{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #B391FF;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 400px;
+    z-index: -1;
+}
+
+a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+input{
+    border-radius: 14px;
+    border: #D2D6DC 1px solid;
+    font-size: 14pt;
+    padding: 10px;
+}
+
+section.menu{
+    max-height: calc(100vh - 80px);
+    width: 300px;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+
+    i{
+        color: #B391FF;
+    }
+
+    *{
+        font-weight: bold;
+    }
+}
+
+// For selected items in menu
+.menu-item-true{
+    background: #B391FF !important;
+
+    *{
+        color: white !important;
+    }
+}
+
+section.overlay-content{
+    justify-self: stretch;
+    margin-left: 20px;
+}
+
+div.last-item{
+    margin-top: auto !important;
+}
+
+div.menu-item{
+    background: #F2F2F2;
+    border-radius: 35px;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+i{
+    font-size: 16pt;
+    margin-left: 10px;
+}
+
+div.menu-item:hover{
+    cursor: pointer;
+
+    * {
+        color: white;
+    }
+}
+
+.application-overlay{
+    margin-left: 20px;
+    justify-self: stretch;
+    width: 100%;
+}
+
+div.top-left-bubble{
+    top:-120px;
+    left: -60px;
+}
+
+div.bottom-left-bubble{
+    top: 800px;
+    left: 200px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-y: hidden; }

@@ -1,0 +1,37 @@
+<form (ngsubmit)="onSubmit()" [formGroup]="applicationForms">
+  <h1>Create new application</h1>
+  <input placeholder="Application name" formControlName="applicationName" />
+  <br />
+  <input placeholder="Application uri" formControlName="applicationUri" />
+  <br />
+
+  <div class="header">
+    <h2>Claims</h2>
+    <i (click)="addClaim()" class="fa-solid fa-plus button-add"></i>
+  </div>
+
+  <div class="claims-list">
+    <div
+      *ngFor="
+        let claim of applicationForms.controls.values.controls;
+        let i = index
+      "
+    >
+      <input
+        type="text"
+        placeholder="Claim {{ i + 1 }}"
+        [formControl]="claim"
+      />
+      <select
+        class="claim-type"
+        [formControl]="applicationForms.controls.types.controls[i]"
+      >
+        <option>String</option>
+        <option>Number</option>
+        <option>Date</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" (click)="onSubmit()">Create</button>
+</form>

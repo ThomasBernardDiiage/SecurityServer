@@ -1,0 +1,26 @@
+.users-page {
+  display: flex;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.user-name {
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.list{
+  overflow-y: auto;
+}
+
+.menu-item:hover{
+  background-color: #B391FF;
+}
+
+.menu-item > img{
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  background-color: #B391FF;
+}

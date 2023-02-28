@@ -1,0 +1,15 @@
+.applications-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app-name {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.list {
+  overflow-y: auto;
+}

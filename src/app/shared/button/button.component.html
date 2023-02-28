@@ -1,0 +1,4 @@
+<button (click)="onButtonClick()" type="submit" *ngIf="!isLoading">{{buttonText}}</button>
+<section *ngIf="isLoading">
+  <lottie-player  src="https://lottie.host/fd70a806-7add-4c24-8c55-d4d1d07ad657/NhQMBHlJjp.json" background="transparent" speed="1" style="width: 80px; height: 50px;" loop autoplay></lottie-player>
+</section>

@@ -1,0 +1,26 @@
+<section class="wrapper">
+    <section class="overlay menu">
+      <div *ngIf="connectedUser" class="welcome">
+          <img src="{{connectedUser.picture}}" class="avatar"/>
+          <div class="title">{{connectedUser.firstname}} {{connectedUser.lastname | uppercase}}</div>
+      </div>
+      <hr/>
+      <div *ngFor="let menuItem of menuItems" class="menu-item menu-item-{{menuItem.isSelected}}" routerLink="{{menuItem.path}}" (click)="onMenuItemClick(menuItem)">
+          <i class="{{menuItem.image}}"></i>
+          <span>{{menuItem.name}}</span>
+      </div>
+      <div class="menu-item last-item" routerLink="">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+      </div>
+    </section>
+
+    <section class="overlay-content">
+        <router-outlet></router-outlet>
+    </section>
+
+    <div class="bubble top-left-bubble"></div>
+    <div class="bubble bottom-left-bubble"></div>
+
+</section>
+

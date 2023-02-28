@@ -1,0 +1,31 @@
+trigger:
+- dev
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Installing NodeJS V18.x'
+- script: |
+    npm install -g @angular/cli@14.2.9
+    npm install
+    ng build --configuration=production
+  displayName: 'Installing AngularCLI + npm install + build'
+- script: |
+    sudo apt-get update
+    sudo apt-get install -y google-chrome-stable
+    sudo apt-get install -y xvfb
+  displayName: 'Installing Google Chrome'
+- script: |
+    Xvfb -ac :99 -screen 0 1280x1024x16 &
+    export DISPLAY=:99
+    ng test
+  displayName: 'Running Angular Unit Tests'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.sourcesDirectory)'
+    artifact: 'dist'
+    publishLocation: 'pipeline'

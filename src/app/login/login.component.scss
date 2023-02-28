@@ -1,0 +1,78 @@
+.lottie-login{
+    width: 700px;
+    height: 60%;
+}
+
+a, h1{
+    text-align: center;
+}
+
+hr{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+h1{
+    font-size: 32pt;
+    font-family: Ralway, sans-serif;
+    margin-bottom: auto;
+}
+
+.top-bubble{
+    left: 90%;
+    top: -6px;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+.bottom-bubble{
+    left: 60%;
+    top: 60%;
+}
+
+#wrapper{
+    height: 98vh;
+    width: 100vw;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+@media screen and (max-width: 640px) {
+    form.frame {
+      width: 80%;
+    }
+
+    #lottie{
+        display:none;
+    }
+}
+
+#sign-in-button{
+    margin-bottom: 20px;
+}
+
+form.frame{
+    height: 40%;
+    width: 350px;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+form.frame > * {
+    width: 100%;
+}
+
+.purple-span{
+    color: #B391FF;
+}
+
+p.error-message{
+  color: red;
+  text-align: center;
+}

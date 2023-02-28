@@ -1,0 +1,30 @@
+.profile-page {
+  display: flex;
+  height: calc(100vh - 80px);;
+  flex-direction: column;
+}
+
+section{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 30px;
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+
+section {
+  overflow-y: auto;
+}
+
+div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}

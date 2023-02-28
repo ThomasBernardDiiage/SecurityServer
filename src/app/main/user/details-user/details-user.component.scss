@@ -1,0 +1,36 @@
+form {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    border-radius: 8px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    background-color: #B391FF;
+}
+
+div.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons {
+    margin-top: auto;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.edit_form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+

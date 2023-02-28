@@ -1,0 +1,13 @@
+<section class="overlay overlay-detail-app" *ngIf="selectedApp">
+  <div class="detail-app">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/fr/0/09/Logo_App_Store_d%27Apple.png"
+      width="200"
+    />
+    <h1>{{ selectedApp.applicationName | uppercase }}</h1>
+    <h3>{{ selectedApp.applicationSecret }}</h3>
+  </div>
+  <div class="delete-app-container">
+    <button (click)="openDeleteDialog()" class="btn-delete">Delete</button>
+  </div>
+</section>

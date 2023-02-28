@@ -1,0 +1,22 @@
+<form (ngsubmit)="onSubmit()" [formGroup]="userForms">
+  <h1>Create a new user</h1>
+
+  <section>
+    <div>
+      <input type="text" formControlName="email" placeholder="Email">
+      <input type="password" formControlName="password" placeholder="Password">
+      <input type="text" formControlName="firstname" placeholder="Firstname">
+      <input type="text" formControlName="lastname" placeholder="Lastname">
+    </div>
+
+    <div>
+      <img src="{{userForms.controls.picture.value}}">
+      <input type="text" formControlName="picture" placeholder="Picture">
+    </div>
+
+  </section>
+
+  <button type="submit" (click)="onSubmit()">Create</button>
+</form>
+
+

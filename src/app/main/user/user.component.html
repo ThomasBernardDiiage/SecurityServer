@@ -1,0 +1,15 @@
+<section class="users-page">
+  <section class="overlay menu">
+      <div class="header">
+          <i (click)="createUser()" class="fa-solid fa-plus button-add"></i>
+      </div>
+      <div class="list">
+          <div class="menu-item" *ngFor="let user of users" (click)="onUserClick(user)">
+              <img src="{{user.picture}}">
+              <span class="user-name">{{ user.firstname }} {{user.lastname}}</span>
+          </div>
+      </div>
+      <!-- <app-details-application [selectedApp]=selectedApplication></app-details-application> -->
+  </section>
+  <app-details-user [selectedUser]="selectedUser" *ngIf="selectedUser" (onDeleteUserEventEmitter)="deleteUser()"></app-details-user>
+</section>
